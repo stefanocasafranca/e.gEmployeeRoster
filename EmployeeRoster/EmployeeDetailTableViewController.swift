@@ -41,6 +41,8 @@ class EmployeeDetailTableViewController: UITableViewController, EmployeeTypeTabl
             nameTextField.text = employee.name
             dobLabel.text = employee.dateOfBirth.formatted(date: .abbreviated, time: .omitted)
             dobLabel.textColor = .label
+            
+            //Retrieves the List Names Labels from "Employee.swift"
             employeeTypeLabel.text = employee.employeeType.description
             employeeTypeLabel.textColor = .label
         } else {
@@ -49,6 +51,15 @@ class EmployeeDetailTableViewController: UITableViewController, EmployeeTypeTabl
         }
     }
 
+    
+    
+    // BRO COMMENT STEP 6 AND UNDERSTAND THE REST
+    
+    
+    
+    
+    
+    
     // Step 7: Enable save only when fields are valid
     private func updateSaveButtonState() {
         let shouldEnableSaveButton = nameTextField.text?.isEmpty == false && employeeType != nil
@@ -109,6 +120,8 @@ class EmployeeDetailTableViewController: UITableViewController, EmployeeTypeTabl
     func employeeTypeTableViewController(_ controller: EmployeeTypeTableViewController, didSelect employeeType: EmployeeType) {
         self.employeeType = employeeType
         employeeTypeLabel.textColor = .label
+        
+        //Retrieves the List Names Labels from "Employee.swift"
         employeeTypeLabel.text = employeeType.description
         updateSaveButtonState()
     }

@@ -36,6 +36,8 @@ class EmployeeTypeTableViewController: UITableViewController {
         let type = EmployeeType.allCases[indexPath.row]
 
         var content = cell.defaultContentConfiguration()
+        
+        //Retrieves the List Names Labels from "Employee.swift"
         content.text = type.description
         cell.contentConfiguration = content
 

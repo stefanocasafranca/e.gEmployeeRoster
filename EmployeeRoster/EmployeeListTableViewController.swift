@@ -33,6 +33,8 @@ class EmployeeListTableViewController: UITableViewController, EmployeeDetailTabl
         
         // Step 4.4: Set the name and job type to show in the cell
         content.text = employee.name
+        
+        //Retrieves the List Names Labels from "Employee.swift"
         content.secondaryText = employee.employeeType.description
         
         // Step 4.5: Apply that layout to the cell (makes it show up)
